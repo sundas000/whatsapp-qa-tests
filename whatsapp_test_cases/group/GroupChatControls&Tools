@@ -1,0 +1,48 @@
+# WhatsApp – Group Chat Controls & Tools
+
+This module covers the administrative controls and group settings available to group admins, such as edit group info, restrict messaging, disappearing messages, and group settings customization.
+
+---
+
+## Application Specifications
+
+| Feature                           | Description                                                                 |
+|-----------------------------------|-----------------------------------------------------------------------------|
+| Edit Group Info                   | Admins can change group name, photo, and description                        |
+| Restrict Group Info Editing       | Option to allow only admins to edit group info                              |
+| Restrict Messaging                | Admins can restrict messaging to only admins                                |
+| Disappearing Messages             | Group-wide control to enable disappearing messages for all participants     |
+| Group Settings Access             | Admins have a separate “Group Settings” page to manage tools                |
+
+---
+
+## Test Cases
+
+| Test Case ID     | Module                 | Test Case Description                                                   | Expected Result                                                    | Status | Priority | Notes                         |
+|------------------|------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|--------|----------|-------------------------------|
+| GCTT_TC_001      | Group Controls         | Admin changes group name                                               | New group name is updated for all members                         | Pass   | High     |                               |
+| GCTT_TC_002      | Group Controls         | Admin updates group photo                                              | New photo reflects in group header for all participants           | Pass   | Medium   |                               |
+| GCTT_TC_003      | Group Controls         | Admin adds/edits group description                                     | Updated description appears under group info                      | Pass   | Medium   |                               |
+| GCTT_TC_004      | Permissions            | Admin restricts group info editing to only admins                      | Non-admins can no longer edit group name/photo/description        | Pass   | High     |                               |
+| GCTT_TC_005      | Messaging Permissions  | Admin restricts messaging to only admins                               | Only admins can send messages, others see "Only admins can send"  | Pass   | High     |                               |
+| GCTT_TC_006      | Messaging Permissions  | Admin reverts messaging restriction                                    | All members regain messaging access                               | Pass   | Medium   |                               |
+| GCTT_TC_007      | Disappearing Messages  | Admin enables disappearing messages                                    | Messages vanish after selected duration (24 hrs/7 days/90 days)   | Pass   | Medium   |                               |
+| GCTT_TC_008      | Group Settings Access  | Admin opens “Group Settings” section                                   | Interface shows controls: info editing, messaging, and more       | Pass   | Low      |                               |
+
+---
+
+## Platform Behavior Notes
+
+| Platform       | Edit Group Info | Restrict Messaging | Disappearing Messages | Notes                             |
+|----------------|------------------|---------------------|------------------------|-----------------------------------|
+| Android        | ✅ Yes           | ✅ Yes              | ✅ Yes                 | Full control access               |
+| iOS            | ✅ Yes           | ✅ Yes              | ✅ Yes                 | Identical features to Android     |
+| Web/Desktop    | ✅ Yes           | ✅ Yes              | ✅ Yes                 | Controls sync across all devices  |
+
+---
+
+## Notes
+
+- Disappearing messages are applied at group level but each member can override if allowed.
+- Restrictions are effective immediately after admin applies them.
+- Group settings are only visible to admins; members only see group info.

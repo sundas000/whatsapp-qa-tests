@@ -1,0 +1,31 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE configs
+.vscode/
+.idea/
+*.iml
+
+# Log files
+*.log
+logs/
+
+# Test outputs & assets
+Assets/Screenshots/
+Assets/Videos/
+Assets/Logs/
+*.csv
+*.json
+
+# Python cache (if you add automation later)
+__pycache__/
+*.py[cod]
+
+# Node modules (if automation/scripts are added)
+node_modules/
+
+# Sensitive files
+.env
+*.key
+*.pem
